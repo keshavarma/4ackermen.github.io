@@ -1,8 +1,8 @@
 # ----
 # Site
 
-title: Hydra Template
-url: "https://proud-alligator.cloudvent.net"
+title: 4ackermen
+url: "https://4ackermen.github.io/"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
@@ -10,15 +10,15 @@ disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Product marketing template for Jekyll.
+description: 4ackermen's website
 author:
   name:
   email:
   twitter: # twitter username without the @ symbol
 social:
-  name: Hydra Template
+  name: 4ackermen
   links:
-    - https://github.com/CloudCannon/hydra-jekyll-template
+    - https://github.com/4ackermen
 
 # -----
 # Build
@@ -99,6 +99,7 @@ social_icons:
   - Twitter
   - YouTube
   - RSS
+  - GitHub
 
 _comments:
   map: Update the map location and display settings.
