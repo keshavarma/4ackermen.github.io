@@ -1,0 +1,48 @@
+I"	
+<h1 id="week-1">Week 1</h1>
+
+<p>In this post, we start diving into the implementation details of Pundit - a technical assessment platform for companies, organizations, and CTF teams to train and assess skills of a candidate.</p>
+
+<p>We intend to use Python as our main development language. A simple visual breakdown of our thought process for Pundit:</p>
+
+<p><img src="https://user-images.githubusercontent.com/32199592/106364512-977f3b80-6355-11eb-919b-2f83544d53a3.png" /></p>
+
+<hr />
+<p><br /></p>
+
+<h2 id="implementation-details">Implementation details</h2>
+
+<p>There are two types of users - the recruiting team (admins) and the candidates (users)</p>
+
+<p>Pundit can be broken down into the following modules:</p>
+
+<p><em>Modules</em></p>
+
+<p><strong><strong>1 - Task validator</strong></strong></p>
+
+<p>The recruiting team releases a set of tasks that are to be completed by the candidates. The candidates need to submit their solutions. This module verifies whether the task was completed or not. 
+A task can be flag based (users need to submit a flag) or challenge based (users need to submit their solution which will be run against various test cases)</p>
+
+<p><strong><strong> 1.1 -  Plagiarism detection </strong></strong> <br />
+  We intend to use MOSS (Measure of Software Similarity) to identify plagiarism. This submodule will verify a given submission against the database to see if the solution has been plagiarised or not.</p>
+
+<p><strong><strong> 1.2 - Test case validator </strong></strong> <br />
+  This submodule will run a given solution against the given set of test cases set by the admin and verify if</p>
+<ul>
+  <li>Solution gives the correct output on each test case</li>
+  <li>Solution does not cross the time limit (if any)</li>
+</ul>
+
+<p><strong><strong>2 - User statistics**</strong></strong></p>
+
+<p>This module is for recruiters to view the submission statistics of the entire set of users.</p>
+
+<p><strong><strong>2.1 - Leaderboard </strong></strong><br />
+  This submodule is responsible for maintaining a leaderboard of the users based on the submissions they have given.</p>
+
+<p><strong><strong> 2.2 - First Blood</strong></strong> <br />
+  “First Blood” refers to the first submission of a given task. The recruiting team can view the list of first bloods of all the tasks.</p>
+
+<p>On the frontend, currently we are keeping it minimal with two dashboards - admin facing and user facing. The focus right now is to create the backend and once the core APIs are done, we can always extend them and include in the frontend.</p>
+
+:ET
